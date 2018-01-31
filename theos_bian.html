@@ -604,22 +604,27 @@
 <!--		</div>-->
 		<input type="hidden" name='attr_arm1_ata_tot' value="(@{ata_base} + @{arm1_ata_arm} + @{arm1_ata_car} + @{arm1_ata_mod})"/>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm1_ata_tot1' style="width: 40px;" value="(@{arm1_ata_tot})" disabled="true" />
+			<input type="number" name='attr_arm1_ata_tot1' style="width: 40px;" value="(@{arm1_ata_tot} + (@{arm1_sec} * @{ata_base}))" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm1_ata_tot2' style="width: 40px;" value="((@{arm1_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+			<input type="number" name='attr_arm1_ata_tot2' style="width: 40px;" value="((1 + @{arm1_sec}) * (@{arm1_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm1_ata_tot3' style="width: 40px;" value="((@{arm1_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+			<input type="number" name='attr_arm1_ata_tot3' style="width: 40px;" value="((1 + @{arm1_sec}) * (@{arm1_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm1_ata_tot4' style="width: 40px;" value="((@{arm1_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+			<input type="number" name='attr_arm1_ata_tot4' style="width: 40px;" value="((1 + @{arm1_sec}) * (@{arm1_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
 		</div>
 	</div>
 
 	<div class="sheet-row">
 		<div class="sheet-col-200">
-			<label>&nbsp;</label>
+			<div class="sheet-col-100">
+				<label>Secundaria</label>
+			</div>
+			<div class="sheet-col-80">
+				<input type='checkbox' name='attr_arm1_sec' value="-1" />
+			</div>
 		</div>
 		<div class="sheet-col-80">
 			<label>Daño</label>
@@ -704,22 +709,27 @@
 		</div>
 		<input type="hidden" name='attr_arm2_ata_tot' value="(@{ata_base} + @{arm2_ata_arm} + @{arm2_ata_car} + @{arm2_ata_mod})"/>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm2_ata_tot1' style="width: 40px;" value="(@{arm2_ata_tot})" disabled="true" />
+			<input type="number" name='attr_arm2_ata_tot1' style="width: 40px;" value="(@{arm2_ata_tot} + (@{arm2_sec} * @{ata_base}))" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm2_ata_tot2' style="width: 40px;" value="((@{arm2_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+			<input type="number" name='attr_arm2_ata_tot2' style="width: 40px;" value="((1 + @{arm2_sec}) * (@{arm2_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm2_ata_tot3' style="width: 40px;" value="((@{arm2_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+			<input type="number" name='attr_arm2_ata_tot3' style="width: 40px;" value="((1 + @{arm2_sec}) * (@{arm2_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm2_ata_tot4' style="width: 40px;" value="((@{arm2_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+			<input type="number" name='attr_arm2_ata_tot4' style="width: 40px;" value="((1 + @{arm2_sec}) * (@{arm2_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
 		</div>
 	</div>
 
 	<div class="sheet-row">
 		<div class="sheet-col-200">
-			<label>&nbsp;</label>
+			<div class="sheet-col-100">
+				<label>Secundaria</label>
+			</div>
+			<div class="sheet-col-80">
+				<input type='checkbox' name='attr_arm2_sec' value="-1" />
+			</div>
 		</div>
 		<div class="sheet-col-80">
 			<label>Daño</label>
@@ -804,22 +814,27 @@
 		</div>
 		<input type="hidden" name='attr_arm3_ata_tot' value="(@{ata_base} + @{arm3_ata_arm} + @{arm3_ata_car} + @{arm3_ata_mod})"/>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm3_ata_tot1' style="width: 40px;" value="(@{arm3_ata_tot})" disabled="true" />
+			<input type="number" name='attr_arm3_ata_tot1' style="width: 40px;" value="(@{arm3_ata_tot} + (@{arm3_sec} * @{ata_base}))" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm3_ata_tot2' style="width: 40px;" value="((@{arm3_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+			<input type="number" name='attr_arm3_ata_tot2' style="width: 40px;" value="((1 + @{arm3_sec}) * (@{arm3_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm3_ata_tot3' style="width: 40px;" value="((@{arm3_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+			<input type="number" name='attr_arm3_ata_tot3' style="width: 40px;" value="((1 + @{arm3_sec}) * (@{arm3_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm3_ata_tot4' style="width: 40px;" value="((@{arm3_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+			<input type="number" name='attr_arm3_ata_tot4' style="width: 40px;" value="((1 + @{arm3_sec}) * (@{arm3_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
 		</div>
 	</div>
 
 	<div class="sheet-row">
 		<div class="sheet-col-200">
-			<label>&nbsp;</label>
+			<div class="sheet-col-100">
+				<label>Secundaria</label>
+			</div>
+			<div class="sheet-col-80">
+				<input type='checkbox' name='attr_arm3_sec' value="-1" />
+			</div>
 		</div>
 		<div class="sheet-col-80">
 			<label>Daño</label>
@@ -904,22 +919,27 @@
 		</div>
 		<input type="hidden" name='attr_arm4_ata_tot' value="(@{ata_base} + @{arm4_ata_arm} + @{arm4_ata_car} + @{arm4_ata_mod})"/>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm4_ata_tot1' style="width: 40px;" value="(@{arm4_ata_tot})" disabled="true" />
+			<input type="number" name='attr_arm4_ata_tot1' style="width: 40px;" value="(@{arm4_ata_tot} + (@{arm4_sec} * @{ata_base}))" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm4_ata_tot2' style="width: 40px;" value="((@{arm4_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+			<input type="number" name='attr_arm4_ata_tot2' style="width: 40px;" value="((1 + @{arm4_sec}) * (@{arm4_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm4_ata_tot3' style="width: 40px;" value="((@{arm4_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+			<input type="number" name='attr_arm4_ata_tot3' style="width: 40px;" value="((1 + @{arm4_sec}) * (@{arm4_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm4_ata_tot4' style="width: 40px;" value="((@{arm4_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+			<input type="number" name='attr_arm4_ata_tot4' style="width: 40px;" value="((1 + @{arm4_sec}) * (@{arm4_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
 		</div>
 	</div>
 
 	<div class="sheet-row">
 		<div class="sheet-col-200">
-			<label>&nbsp;</label>
+			<div class="sheet-col-100">
+				<label>Secundaria</label>
+			</div>
+			<div class="sheet-col-80">
+				<input type='checkbox' name='attr_arm4_sec' value="-1" />
+			</div>
 		</div>
 		<div class="sheet-col-80">
 			<label>Daño</label>
@@ -1004,22 +1024,27 @@
 		</div>
 		<input type="hidden" name='attr_arm5_ata_tot' value="(@{ata_base} + @{arm5_ata_arm} + @{arm5_ata_car} + @{arm5_ata_mod})"/>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm5_ata_tot1' style="width: 40px;" value="(@{arm5_ata_tot})" disabled="true" />
+			<input type="number" name='attr_arm5_ata_tot1' style="width: 40px;" value="(@{arm5_ata_tot} + (@{arm5_sec} * @{ata_base}))" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm5_ata_tot2' style="width: 40px;" value="((@{arm5_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+			<input type="number" name='attr_arm5_ata_tot2' style="width: 40px;" value="((1 + @{arm5_sec}) * (@{arm5_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm5_ata_tot3' style="width: 40px;" value="((@{arm5_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+			<input type="number" name='attr_arm5_ata_tot3' style="width: 40px;" value="((1 + @{arm5_sec}) * (@{arm5_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm5_ata_tot4' style="width: 40px;" value="((@{arm5_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+			<input type="number" name='attr_arm5_ata_tot4' style="width: 40px;" value="((1 + @{arm5_sec}) * (@{arm5_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
 		</div>
 	</div>
 
 	<div class="sheet-row">
 		<div class="sheet-col-200">
-			<label>&nbsp;</label>
+			<div class="sheet-col-100">
+				<label>Secundaria</label>
+			</div>
+			<div class="sheet-col-80">
+				<input type='checkbox' name='attr_arm5_sec' value="-1" />
+			</div>
 		</div>
 		<div class="sheet-col-80">
 			<label>Daño</label>
