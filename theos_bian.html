@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<link rel="stylesheet" href="theos_bian.css">
+</head>
+
+
+<!-- Set up the Tabs -->
+<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basic Info" checked="checked"/> 
+<span class="sheet-tab sheet-tab1" style='line-height: 20px;'>Informacion Basica</span>
+<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Combate" /> 
+<span class="sheet-tab sheet-tab2" style='line-height: 40px;'>Combate</span>
+
+<input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Habilidades" /> 
+<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>Habilidades</span>
+
+<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Inventario" /> 
+<span class="sheet-tab sheet-tab4" style='line-height: 40px;'>Inventario</span>
+
+<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Magia" /> 
+<span class="sheet-tab sheet-tab5" style='line-height: 40px;'>Magia</span>
+
+<input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" />
+<span class="sheet-tab sheet-tab99" style='line-height: 40px;'>Todo</span>
+<!-- End Tab setup -->
+
+<div class="sheet-section-basica"><!-- Basica -->
+
+<hr/>
+
+<!-- Datos Basicos (2 columnas) -->
+
+<div class="sheet-table">
+
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Nombre</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_nombre" />
+		</div>
+		<div class="sheet-col-100">
+			<label>Estatura</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_estatura" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Raza</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_raza" />
+		</div>
+		<div class="sheet-col-100">
+			<label>Peso</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_peso" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Niveles</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_clases" />
+		</div>
+		<div class="sheet-col-100">
+			<label>Ojos</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_ojos" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Experiencia</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_xp" />
+		</div>
+		<div class="sheet-col-100">
+			<label>Cabello</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_cabello" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-300">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Piel</label>
+		</div>
+		<div class="sheet-col-300">
+			<input type="text" name="attr_piel" />
+		</div>
+	</div>
+	
+</div>
+
+<hr/>
+
+<!-- Caracteristicas -->
+<h3 style="margin-bottom: 10px;">Caracteristicas</h3>
+
+<!-- Tabla Caract -->
+<div class="sheet-table">
+
+	<!-- Encabezado -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Nombre</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Base</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Equipo</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Temp</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Total</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Mod</label>
+		</div>
+	</div>
+
+	<!-- Fuerza -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Fuerza</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_fue' value='10' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_fue_eq' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_fue_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_fue_total' value="(@{fue} + @{fue_eq} + @{fue_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_fue_mod' value="(floor((@{fue_total}) / 2) - 5)" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Destreza -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Destreza</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_des' value='10' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_des_eq' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_des_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_des_total' value="(@{des} + @{des_eq} + @{des_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_des_mod' value="(floor((@{des_total}) / 2) - 5)" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Constitucion -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Constitucion</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_con' value='10' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_con_eq' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_con_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_con_total' value="(@{con} + @{con_eq} + @{con_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_con_mod' value="(floor((@{con_total}) / 2) - 5)" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Inteligencia -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Inteligencia</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_int' value='10' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_int_eq' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_int_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_int_total' value="(@{int} + @{int_eq} + @{int_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_int_mod' value="(floor((@{int_total}) / 2) - 5)" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Sabiduria -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Sabiduria</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_sab' value='10' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_sab_eq' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_sab_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_sab_total' value="(@{sab} + @{sab_eq} + @{sab_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_sab_mod' value="(floor((@{sab_total}) / 2) - 5)" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Carisma -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Carisma</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_car' value='10' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_car_eq' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_car_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_car_total' value="(@{car} + @{car_eq} + @{car_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_car_mod' value="(floor((@{car_total}) / 2) - 5)" disabled="true" />
+		</div>
+	</div>
+
+<!-- Fin de Tabla de Caracteristicas -->
+</div>
+
+<!-- Fin Tab Basica -->
+</div>
+
+<!-- Tab Combate -->
+<div class="sheet-section-combate">
+
+<hr/>
+
+<!-- TS -->
+<h3 style="margin-bottom: 10px;">Tiradas de Salvacion</h3>
+
+<!-- Tabla TS -->
+<div class="sheet-table">
+
+	<!-- Encabezado -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>TS</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Base</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Caract.</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Mod</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Otros</label>
+		</div>
+		<div  class="sheet-col-100">
+			<label>Total</label>
+		</div>
+	</div>
+
+	<!-- Dureza -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Dureza</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_dur' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<label>Con</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_dur_mod' value="(@{con_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_dur_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_dur_total' value="(@{ts_dur} + @{ts_dur_mod} + @{ts_dur_temp})" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Reflejos -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Reflejos</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_ref' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<label>Des</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_ref_mod' value="(@{des_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_ref_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_ref_total' value="(@{ts_ref} + @{ts_ref_mod} + @{ts_ref_temp})" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Mente -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Mente</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_men' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<label>Int</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_men_mod' value="(@{int_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_men_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_men_total' value="(@{ts_men} + @{ts_men_mod} + @{ts_men_temp})" disabled="true" />
+		</div>
+	</div>
+
+	<!-- Espiritu -->
+	<div class="sheet-row">
+		<div class="sheet-col-100">
+			<label>Espiritu</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_esp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<label>Sab</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_esp_mod' value="(@{sab_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_esp_temp' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_ts_esp_total' value="(@{ts_esp} + @{ts_esp_mod} + @{ts_esp_temp})" disabled="true" />
+		</div>
+	</div>
+	
+<!-- Fin de Tabla de TS -->
+</div>
+
+<hr/>
+
+<!-- Defensas -->
+
+<!-- Defensas - CA -->
+
+<!-- Encabezado -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label>&nbsp;</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>Base</label>
+	</div>
+	<div  class="sheet-col-100">
+		<label>Des</label>
+	</div>
+	<div  class="sheet-col-100">
+		<label>Arm</label>
+	</div>
+	<div  class="sheet-col-100">
+		<label>Esc</label>
+	</div>
+	<div  class="sheet-col-100">
+		<label>Otros</label>
+	</div>
+	<div  class="sheet-col-100">
+		<label>Total</label>
+	</div>
+</div>
+
+<!-- Valores -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label style="font-weight:bold">CA</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>10</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ca_des' value="(@{des_mod})" disabled="true" />
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ca_arm' value='0' />
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ca_esc' value='0' />
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ca_var' value='0' />
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ca_total' value="(10 + @{des_mod} + @{ca_arm} + @{ca_esc} + @{ca_var})" disabled="true" />
+	</div>
+</div>
+
+<hr/>
+
+<!-- Defensas - PG -->
+
+<!-- Encabezado -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label>&nbsp;</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>Total</label>
+	</div>
+	<div  class="sheet-col-400">
+		<label>Actual</label>
+	</div>
+</div>
+
+<!-- Valores -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label style="font-weight:bold">PG</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_pg_tot' value='0' />
+	</div>
+	<div class="sheet-col-100">
+<!--		<input type="text" name="attr_pg_act" />-->
+		<input type="number" name='attr_pg_act' value='0' />
+	</div>
+</div>
+
+<hr/>
+<!-- Defensas - PM -->
+
+<!-- Encabezado -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label>&nbsp;</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>Total</label>
+	</div>
+	<div  class="sheet-col-400">
+		<label>Actual</label>
+	</div>
+</div>
+
+<!-- Valores -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label style="font-weight:bold">PM</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_pm_tot' value='0' />
+	</div>
+	<div class="sheet-col-100">
+<!--		<input type="text" name="attr_pm_act" />-->
+		<input type="number" name='attr_pm_act' value='0' />
+	</div>
+</div>
+
+<hr/>
+
+<!-- Ataques Principales -->
+
+<!-- Ataque Base -->
+<div class="sheet-row">
+	<div class="sheet-col-200">
+		<label style="font-weight:bold">Ataques Base</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ata_base' value='1' />
+	</div>
+	<div class="sheet-col-200">
+		<label style="font-weight:bold">Numero de Ataques</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_ata_num' value="(ceil(@{ata_base} / 5))" disabled="true" />
+	</div>
+</div>
+
+<!-- Factores de calculo de Ataques-->
+
+<input type="hidden" name='attr_ata2_factor' value="( (((@{ata_base} - 5) + abs(@{ata_base} - 5)) / 2) / (((@{ata_base} - 5 + 1) + abs(@{ata_base} - 5 - 1)) / 2) )" />
+<input type="hidden" name='attr_ata3_factor' value="( (((@{ata_base} - 10) + abs(@{ata_base} - 10)) / 2) / (((@{ata_base} - 10 + 1) + abs(@{ata_base} - 10 - 1)) / 2) )" />
+<input type="hidden" name='attr_ata4_factor' value="( (((@{ata_base} - 15) + abs(@{ata_base} - 15)) / 2) / (((@{ata_base} - 15 + 1) + abs(@{ata_base} - 15 - 1)) / 2) )" />
+			
+<hr/>
+
+<!-- Arma 1 -->
+<div class="sheet-table">
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label style="font-weight:bold">Arma 1</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Arma</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Caract.</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Ataques</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_arm1_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<label>Ataque</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm1_ata_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_car_mod' value="(@{arm1_ata_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_mod' value='0' />
+		</div>
+<!--		<div class="sheet-col-80">-->
+<!--			<input type="number" name='attr_arm1_ata_tot' style="width: 65px;" value="(@{ata_base} + @{arm1_ata_arm} + @{arm1_ata_car} + @{arm1_ata_mod})" disabled="true" />-->
+<!--		</div>-->
+		<input type="hidden" name='attr_arm1_ata_tot' value="(@{ata_base} + @{arm1_ata_arm} + @{arm1_ata_car} + @{arm1_ata_mod})"/>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_tot1' style="width: 40px;" value="(@{arm1_ata_tot})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_tot2' style="width: 40px;" value="((@{arm1_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_tot3' style="width: 40px;" value="((@{arm1_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_ata_tot4' style="width: 40px;" value="((@{arm1_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Daño</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_dañ_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm1_dan_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_dan_car_mod' value="(@{arm1_dan_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_dañ_mod' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="text" name="attr_arm1_dañ_tot" style="width: 120px;" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- Arma 2 -->
+<div class="sheet-table">
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label style="font-weight:bold">Arma 2</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Arma</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Caract.</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Ataques</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_arm2_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<label>Ataque</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm2_ata_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_car_mod' value="(@{arm2_ata_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_mod' value='0' />
+		</div>
+		<input type="hidden" name='attr_arm2_ata_tot' value="(@{ata_base} + @{arm2_ata_arm} + @{arm2_ata_car} + @{arm2_ata_mod})"/>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_tot1' style="width: 40px;" value="(@{arm2_ata_tot})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_tot2' style="width: 40px;" value="((@{arm2_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_tot3' style="width: 40px;" value="((@{arm2_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_ata_tot4' style="width: 40px;" value="((@{arm2_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Daño</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_dañ_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm2_dan_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_dan_car_mod' value="(@{arm2_dan_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_dañ_mod' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="text" name="attr_arm2_dañ_tot" style="width: 120px;" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- Arma 3 -->
+<div class="sheet-table">
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label style="font-weight:bold">Arma 3</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Arma</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Caract.</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Ataques</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_arm3_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<label>Ataque</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm3_ata_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_car_mod' value="(@{arm3_ata_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_mod' value='0' />
+		</div>
+		<input type="hidden" name='attr_arm3_ata_tot' value="(@{ata_base} + @{arm3_ata_arm} + @{arm3_ata_car} + @{arm3_ata_mod})"/>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_tot1' style="width: 40px;" value="(@{arm3_ata_tot})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_tot2' style="width: 40px;" value="((@{arm3_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_tot3' style="width: 40px;" value="((@{arm3_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_ata_tot4' style="width: 40px;" value="((@{arm3_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Daño</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_dañ_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm3_dan_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_dan_car_mod' value="(@{arm3_dan_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_dañ_mod' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="text" name="attr_arm3_dañ_tot" style="width: 120px;" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- Arma 4 -->
+<div class="sheet-table">
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label style="font-weight:bold">Arma 4</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Arma</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Caract.</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Ataques</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_arm4_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<label>Ataque</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm4_ata_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_car_mod' value="(@{arm4_ata_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_mod' value='0' />
+		</div>
+		<input type="hidden" name='attr_arm4_ata_tot' value="(@{ata_base} + @{arm4_ata_arm} + @{arm4_ata_car} + @{arm4_ata_mod})"/>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_tot1' style="width: 40px;" value="(@{arm4_ata_tot})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_tot2' style="width: 40px;" value="((@{arm4_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_tot3' style="width: 40px;" value="((@{arm4_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_ata_tot4' style="width: 40px;" value="((@{arm4_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Daño</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_dañ_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm4_dan_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_dan_car_mod' value="(@{arm4_dan_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_dañ_mod' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="text" name="attr_arm4_dañ_tot" style="width: 120px;" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- Arma 5 -->
+<div class="sheet-table">
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label style="font-weight:bold">Arma 5</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Arma</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Caract.</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-50">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-100">
+			<label>Ataques</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_arm5_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<label>Ataque</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm5_ata_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_car_mod' value="(@{arm5_ata_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_mod' value='0' />
+		</div>
+		<input type="hidden" name='attr_arm5_ata_tot' value="(@{ata_base} + @{arm5_ata_arm} + @{arm5_ata_car} + @{arm5_ata_mod})"/>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_tot1' style="width: 40px;" value="(@{arm5_ata_tot})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_tot2' style="width: 40px;" value="((@{arm5_ata_tot} - 5) * @{ata2_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_tot3' style="width: 40px;" value="((@{arm5_ata_tot} - 10) * @{ata3_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_ata_tot4' style="width: 40px;" value="((@{arm5_ata_tot} - 15) * @{ata4_factor})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Daño</label>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_dañ_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm5_dan_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_dan_car_mod' value="(@{arm5_dan_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_dañ_mod' value='0' />
+		</div>
+		<div class="sheet-col-100">
+			<input type="text" name="attr_arm5_dañ_tot" style="width: 120px;" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- Fin Tab Combate -->
+</div>
+
+<!-- Tab Habilidades -->
+<div class="sheet-section-habilidades">
+
+<hr/>
+
+<!-- Habilidades Normales -->
+
+<div>
+	<label style="font-weight:bold">Habilidades Normales</label>
+</div>
+
+<div class="sheet-table">
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>Nombre</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Rango</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Caract</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Total</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab1_nom" style="width: 180px;" value="Buscar" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab1_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab1_car" title="hab1_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" >Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" selected>Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab1_car_mod' value="(@{hab1_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab1_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab1_total' value="(@{hab1_base} + @{hab1_car} + @{hab1_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab2_nom" style="width: 180px;" value="Engañar" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab2_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab2_car" title="hab2_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" >Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" selected>Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab2_car_mod' value="(@{hab2_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab2_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab2_total' value="(@{hab2_base} + @{hab2_car} + @{hab2_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab3_nom" style="width: 180px;" value="Esconderse" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab3_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab3_car" title="hab3_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" >Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" selected>Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab3_car_mod' value="(@{hab3_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab3_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab3_total' value="(@{hab3_base} + @{hab3_car} + @{hab3_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab4_nom" style="width: 180px;" value="Escuchar" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab4_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab4_car" title="hab4_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" >Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" selected>Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab4_car_mod' value="(@{hab4_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab4_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab4_total' value="(@{hab4_base} + @{hab4_car} + @{hab4_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab5_nom" style="width: 180px;" value="Moverse en Silencio" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab5_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab5_car" title="hab5_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" >Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" selected>Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab5_car_mod' value="(@{hab5_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab5_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab5_total' value="(@{hab5_base} + @{hab5_car} + @{hab5_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab6_nom" style="width: 180px;" value="Trepar" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab6_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab6_car" title="hab6_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab6_car_mod' value="(@{hab6_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab6_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab6_total' value="(@{hab6_base} + @{hab6_car} + @{hab6_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab7_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab7_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab7_car" title="hab7_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab7_car_mod' value="(@{hab7_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab7_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab7_total' value="(@{hab7_base} + @{hab7_car} + @{hab7_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab8_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab8_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab8_car" title="hab8_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab8_car_mod' value="(@{hab8_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab8_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab8_total' value="(@{hab8_base} + @{hab8_car} + @{hab8_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab9_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab9_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab9_car" title="hab9_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab9_car_mod' value="(@{hab9_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab9_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab9_total' value="(@{hab9_base} + @{hab9_car} + @{hab9_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab10_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab10_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab10_car" title="hab10_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab10_car_mod' value="(@{hab10_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab10_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab10_total' value="(@{hab10_base} + @{hab10_car} + @{hab10_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab11_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab11_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab11_car" title="hab11_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab11_car_mod' value="(@{hab11_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab11_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab11_total' value="(@{hab11_base} + @{hab11_car} + @{hab11_mod})" disabled="true" />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab12_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab12_base' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<select name="attr_hab12_car" title="hab12_car" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
+				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+				<option type="text" style="width: 35px;" value="@{int_mod}" >Int</option>
+				<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+				<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+			</select>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab12_car_mod' value="(@{hab12_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab12_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab12_total' value="(@{hab12_base} + @{hab12_car} + @{hab12_mod})" disabled="true" />
+		</div>
+	</div>
+
+</div>
+
+<hr/>
+
+<!-- Habiliades Diarias -->
+
+<div>
+	<label style="font-weight:bold">Habilidades Diarias</label>
+</div>
+
+<div class="sheet-table">
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>Nombre</label>
+		</div>
+		<div class="sheet-col-400">
+			<label>Descripcion</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Total</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Usada</label>
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia1_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia1_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia1_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia1_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia2_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia2_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia2_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia2_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia3_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia3_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia3_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia3_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia4_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia4_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia4_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia4_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia5_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia5_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia5_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia5_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia6_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia6_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia6_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia6_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia7_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia7_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia7_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia7_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia8_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia8_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia8_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia8_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia9_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia9_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia9_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia9_act' value='0' />
+		</div>
+	</div>
+
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<input type="text" name="attr_hab_dia10_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_hab_dia10_des" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia10_tot' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_hab_dia10_act' value='0' />
+		</div>
+	</div>
+
+</div>
+
+<hr/>
+
+<!-- Otras Habilidades -->
+<div>
+	<label style="font-weight:bold">Otras Habilidades</label>
+</div>
+<textarea name="attr_hab_text" style="width: 600px;height: 100px;" ></textarea>
+
+<!-- Fin Tab Habilidades -->
+</div>
+
+<!-- Tab Inventario -->
+<div class="sheet-section-inventario">
+	
+<hr/>
+
+<!-- Equipo -->
+<div>
+	<label style="font-weight:bold">Inventario</label>
+</div>
+<textarea name="attr_inv_text" style="width: 600px;height: 100px;" ></textarea>
+
+<hr/>
+
+<!-- Competencias en Armas y Armaduras -->
+<div>
+	<label style="font-weight:bold">Competencias</label>
+</div>
+<div class="sheet-table">
+
+	<div class="sheet-col-200">
+		<div class="sheet-row">
+			<label>Armas</label>
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm1" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm2" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm3" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm4" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm5" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm6" style="width: 180px;" />
+		</div>
+	</div>
+
+	<div class="sheet-col-200">
+		<div class="sheet-row">
+			<label>Armas</label>
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm7" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm8" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm9" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm10" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm11" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_arm12" style="width: 180px;" />
+		</div>
+	</div>
+
+	<div class="sheet-col-200">
+		<div class="sheet-row">
+			<label>Armaduras y Escudos</label>
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_def1" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_def2" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_def3" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_def4" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_def5" style="width: 180px;" />
+		</div>
+		<div class="sheet-row">
+			<input type="text" name="attr_comp_def6" style="width: 180px;" />
+		</div>
+	</div>
+</div>
+
+<!-- Fin Tab Inventario -->
+</div>
+
+<!-- Tab Magia -->
+<div class="sheet-section-magia">
+
+<hr/>
+
+<!-- Nivel de Conjurador -->
+
+<div class="sheet-row">
+	<div class="sheet-col-200">
+		<label>&nbsp;</label>
+	</div>
+	<div class="sheet-col-80">
+		<label>Nivel</label>
+	</div>
+	<div class="sheet-col-80">
+		<label>Caract.</label>
+	</div>
+	<div class="sheet-col-80">
+		<label>Mod</label>
+	</div>
+	<div class="sheet-col-80">
+		<label>Otros</label>
+	</div>
+	<div class="sheet-col-80">
+		<label>Capacidad</label>
+	</div>
+</div>
+
+<div class="sheet-row">
+	<div class="sheet-col-200">
+		<label style="font-weight:bold">Nivel de Conjurador</label>
+	</div>
+	<div class="sheet-col-80">
+		<input type="number" name='attr_mag_niv' value='0' />
+	</div>
+	<div class="sheet-col-80">
+		<select name="attr_mag_car" title="mag_car" style="width: 60px;" >
+			<option type="text" style="width: 35px;" value="@{fue_mod}" >Fue</option>
+			<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
+			<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
+			<option type="text" style="width: 35px;" value="@{int_mod}" selected>Int</option>
+			<option type="text" style="width: 35px;" value="@{sab_mod}" >Sab</option>
+			<option type="text" style="width: 35px;" value="@{car_mod}" >Car</option>
+		</select>
+	</div>
+	<div class="sheet-col-80">
+		<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+	</div>
+	<div class="sheet-col-80">
+		<input type="number" name='attr_mag_mod' value='0' />
+	</div>
+	<div class="sheet-col-80">
+		<input type="number" name='attr_mag_total' value="(@{mag_niv} + @{mag_car} + @{mag_mod})" disabled="true" />
+	</div>
+</div>
+
+<hr/>
+
+<!-- Exito de Conjuros -->
+<div>
+	<label style="font-weight:bold">Exito de Conjuros</label>
+</div>
+<div class="sheet-table">
+
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label>Nivel</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>PM</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Base</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Mod</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Arm</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Otros</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Total</label>
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">0</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">1</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n0_base' value="((@{mag_niv} + 2 - 0 + abs(@{mag_niv} + 2 - 0) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n0_arm' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n0_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n0_total_pre' value="(@{mag_n0_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod})" />
+			<input type="hidden" name='attr_mag_n0_factor' value="(((@{mag_n0_base} + 1) + abs(@{mag_n0_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n0_total' value="((@{mag_n0_total_pre} * @{mag_n0_base}) / @{mag_n0_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">1</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">2</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n1_base' value="((@{mag_niv} + 2 - 2 + abs(@{mag_niv} + 2 - 2) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n1_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n1_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n1_total_pre' value="(@{mag_n1_base} + @{mag_car} + @{mag_n1_arm} + @{mag_n1_mod})" />
+			<input type="hidden" name='attr_mag_n1_factor' value="(((@{mag_n1_base} + 1) + abs(@{mag_n1_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n1_total' value="((@{mag_n1_total_pre} * @{mag_n1_base}) / @{mag_n1_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">2</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">4</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n2_base' value="((@{mag_niv} + 2 - 4 + abs(@{mag_niv} + 2 - 4) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n2_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n2_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n2_total_pre' value="(@{mag_n2_base} + @{mag_car} + @{mag_n2_arm} + @{mag_n2_mod})" />
+			<input type="hidden" name='attr_mag_n2_factor' value="(((@{mag_n2_base} + 1) + abs(@{mag_n2_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n2_total' value="((@{mag_n2_total_pre} * @{mag_n2_base}) / @{mag_n2_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">3</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">6</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n3_base' value="((@{mag_niv} + 2 - 6 + abs(@{mag_niv} + 2 - 6) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n3_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n3_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n3_total_pre' value="(@{mag_n3_base} + @{mag_car} + @{mag_n3_arm} + @{mag_n3_mod})" />
+			<input type="hidden" name='attr_mag_n3_factor' value="(((@{mag_n3_base} + 1) + abs(@{mag_n3_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n3_total' value="((@{mag_n3_total_pre} * @{mag_n3_base}) / @{mag_n3_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">4</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">8</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n4_base' value="((@{mag_niv} + 2 - 8 + abs(@{mag_niv} + 2 - 8) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n4_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n4_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n4_total_pre' value="(@{mag_n4_base} + @{mag_car} + @{mag_n4_arm} + @{mag_n4_mod})" />
+			<input type="hidden" name='attr_mag_n4_factor' value="(((@{mag_n4_base} + 1) + abs(@{mag_n4_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n4_total' value="((@{mag_n4_total_pre} * @{mag_n4_base}) / @{mag_n4_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">5</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">10</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n5_base' value="((@{mag_niv} + 2 - 10 + abs(@{mag_niv} + 2 - 10) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n5_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n5_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n5_total_pre' value="(@{mag_n5_base} + @{mag_car} + @{mag_n5_arm} + @{mag_n5_mod})" />
+			<input type="hidden" name='attr_mag_n5_factor' value="(((@{mag_n5_base} + 1) + abs(@{mag_n5_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n5_total' value="((@{mag_n5_total_pre} * @{mag_n5_base}) / @{mag_n5_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">6</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">12</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n6_base' value="((@{mag_niv} + 2 - 12 + abs(@{mag_niv} + 2 - 12) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n6_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n6_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n6_total_pre' value="(@{mag_n6_base} + @{mag_car} + @{mag_n6_arm} + @{mag_n6_mod})" />
+			<input type="hidden" name='attr_mag_n6_factor' value="(((@{mag_n6_base} + 1) + abs(@{mag_n6_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n6_total' value="((@{mag_n6_total_pre} * @{mag_n6_base}) / @{mag_n6_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">7</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">14</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n7_base' value="((@{mag_niv} + 2 - 14 + abs(@{mag_niv} + 2 - 14) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n7_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n7_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n7_total_pre' value="(@{mag_n7_base} + @{mag_car} + @{mag_n7_arm} + @{mag_n7_mod})" />
+			<input type="hidden" name='attr_mag_n7_factor' value="(((@{mag_n7_base} + 1) + abs(@{mag_n7_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n7_total' value="((@{mag_n7_total_pre} * @{mag_n7_base}) / @{mag_n7_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">8</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">16</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n8_base' value="((@{mag_niv} + 2 - 16 + abs(@{mag_niv} + 2 - 16) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n8_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n8_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n8_total_pre' value="(@{mag_n8_base} + @{mag_car} + @{mag_n8_arm} + @{mag_n8_mod})" />
+			<input type="hidden" name='attr_mag_n8_factor' value="(((@{mag_n8_base} + 1) + abs(@{mag_n8_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n8_total' value="((@{mag_n8_total_pre} * @{mag_n8_base}) / @{mag_n8_factor})" disabled="true" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">9</label>
+		</div>
+		<div class="sheet-col-80">
+			<label style="font-weight:bold">18</label>
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n9_base' value="((@{mag_niv} + 2 - 18 + abs(@{mag_niv} + 2 - 18) ) / 2)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_car_mod' value="(@{mag_car})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n9_arm' value="(@{mag_n0_arm})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_mag_n9_mod' value='0' />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_n9_total_pre' value="(@{mag_n9_base} + @{mag_car} + @{mag_n9_arm} + @{mag_n9_mod})" />
+			<input type="hidden" name='attr_mag_n9_factor' value="(((@{mag_n9_base} + 1) + abs(@{mag_n9_base} - 1)) / 2)" />
+			<input type="number" name='attr_mag_n9_total' value="((@{mag_n9_total_pre} * @{mag_n9_base}) / @{mag_n9_factor})" disabled="true" />
+		</div>
+	</div>
+		
+		
+</div>
+
+<hr/>
+
+<!-- Dificultad -->
+
+<div class="sheet-row">
+	<div class="sheet-col-200">
+		<label style="font-weight:bold">Dificultad Base: 10</label>
+	</div>
+</div>
+
+<div class="sheet-row">
+	<div class="sheet-col-400">
+		<label>Modificadores por Alterar Conjuro</label>
+	</div>
+</div>
+
+<div class="sheet-row">
+	<div class="sheet-col-100">
+		<label>Menor: +3</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>Mayor: +6</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>Opuesto: +8</label>
+	</div>
+</div>
+
+<hr/>
+
+<div class="sheet-row">
+	<div class="sheet-col-200">
+		<label style="font-weight:bold">Numero de Conjuros</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_mag_capacidad' value="(@{mag_total})" disabled="true" />
+	</div>
+</div>
+
+<hr/>
+
+<!-- Conjuros Preparados -->
+<div>
+	<label style="font-weight:bold">Conjuros Preparados</label>
+</div>
+<div class="sheet-table">
+
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>N°</label>
+		</div>
+		<div class="sheet-col-200">
+			<label>Nombre</label>
+		</div>
+		<div class="sheet-col-80">
+			<label>Nivel</label>
+		</div>
+		<div class="sheet-col-400">
+			<label>Informacion</label>
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>1</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj1_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj1_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj1_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>2</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj2_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj2_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj2_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>3</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj3_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj3_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj3_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>4</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj4_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj4_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj4_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>5</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj5_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj5_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj5_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>6</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj6_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj6_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj6_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>7</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj7_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj7_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj7_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>8</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj8_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj8_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj8_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>9</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj9_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj9_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj9_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>10</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj10_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj10_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj10_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>11</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj11_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj11_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj11_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>12</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj12_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj12_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj12_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>13</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj13_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj13_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj13_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>14</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj14_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj14_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj14_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>15</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj15_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj15_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj15_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>16</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj16_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj16_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj16_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>17</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj17_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj17_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj17_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>18</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj18_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj18_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj18_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>19</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj19_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj19_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj19_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+	<div class="sheet-row">
+		<div class="sheet-col-40">
+			<label>20</label>
+		</div>
+		<div class="sheet-col-200">
+			<input type="text" name="attr_conj20_nom" style="width: 180px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="number" name='attr_conj20_niv' value='0' />
+		</div>
+		<div class="sheet-col-400">
+			<input type="text" name="attr_conj20_info" style="width: 380px;" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- Fin Tab Magia -->
+</div>
+
+
+
+
+
+
+
+
+
