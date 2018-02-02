@@ -2,13 +2,28 @@
   display: table;         
   width: auto;         
   background-color: #eee;         
-  border: 1px solid #666666;         
-  border-spacing: 5px; /* cellspacing:poor IE support for  this */
+  border: 2px solid #666666;         
+  border-spacing: 5px;
 }
 .sheet-row {
   display: table-row;
   width: auto;
   clear: both;
+  background-color: #eee;  
+}
+.sheet-row-dark {
+  display: table-row;
+  width: auto;
+  clear: both;
+  background-color: #ddd;
+}
+.sheet-row-header {
+  display: table-row;
+  width: auto;
+  clear: both;
+  background-color: #ddd;
+  height: 30px;
+  font-weight: bold;
 }
 .sheet-col-400 {
   float: left;
@@ -44,6 +59,11 @@
   float: left;
   display: table-column;         
   width: 40px;         
+}
+.sheet-col-20 {
+  float: left;
+  display: table-column;         
+  width: 20px;         
 }
 .sheet-col {
   float: left;
