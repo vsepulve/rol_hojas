@@ -335,6 +335,14 @@
 <!-- Fin de Tabla de Caracteristicas -->
 </div>
 
+<hr/>
+
+<!-- Notas -->
+<div>
+	<label style="font-weight:bold">Notas e Historial</label>
+</div>
+<textarea name="attr_notas_text" style="width: 600px;height: 200px;" ></textarea>
+
 <!-- Fin Tab Basica -->
 </div>
 
@@ -546,36 +554,6 @@
 	<div class="sheet-col-100">
 <!--		<input type="text" name="attr_pg_act" />-->
 		<input type="number" name='attr_pg_act' value='0' />
-	</div>
-</div>
-
-<hr/>
-<!-- Defensas - PM -->
-
-<!-- Encabezado -->
-<div class="sheet-row" style="font-weight:bold">
-	<div class="sheet-col-80">
-		<label>&nbsp;</label>
-	</div>
-	<div class="sheet-col-100">
-		<label>Total</label>
-	</div>
-	<div  class="sheet-col-400">
-		<label>Actual</label>
-	</div>
-</div>
-
-<!-- Valores -->
-<div class="sheet-row">
-	<div class="sheet-col-80">
-		<label style="font-weight:bold">PM</label>
-	</div>
-	<div class="sheet-col-100">
-		<input type="number" name='attr_pm_tot' value='0' />
-	</div>
-	<div class="sheet-col-100">
-<!--		<input type="text" name="attr_pm_act" />-->
-		<input type="number" name='attr_pm_act' value='0' />
 	</div>
 </div>
 
@@ -2118,6 +2096,36 @@
 	</div>
 	<div class="sheet-col-80">
 		<input type="number" name='attr_mag_total' value="(@{mag_niv} + @{mag_car} + @{mag_mod})" disabled="true" />
+	</div>
+</div>
+
+<hr/>
+<!-- Defensas - PM -->
+
+<!-- Encabezado -->
+<div class="sheet-row" style="font-weight:bold">
+	<div class="sheet-col-80">
+		<label>&nbsp;</label>
+	</div>
+	<div class="sheet-col-100">
+		<label>Total</label>
+	</div>
+	<div  class="sheet-col-400">
+		<label>Actual</label>
+	</div>
+</div>
+
+<!-- Valores -->
+<div class="sheet-row">
+	<div class="sheet-col-80">
+		<label style="font-weight:bold">PM</label>
+	</div>
+	<div class="sheet-col-100">
+		<input type="number" name='attr_pm_tot' value='0' />
+	</div>
+	<div class="sheet-col-100">
+<!--		<input type="text" name="attr_pm_act" />-->
+		<input type="number" name='attr_pm_act' value='0' />
 	</div>
 </div>
 
