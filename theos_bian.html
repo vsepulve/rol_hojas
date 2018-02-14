@@ -671,7 +671,7 @@
 			<input type="number" name='attr_arm1_dañ_arm' value='0' />
 		</div>
 		<div class="sheet-col-80">
-			<select name="attr_arm1_dan_car" title="hab1_car" style="width: 60px;" >
+			<select name="attr_arm1_dañ_car" title="hab1_car" style="width: 60px;" >
 				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
 				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
 				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
@@ -681,14 +681,28 @@
 			</select>
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm1_dan_car_mod' value="(@{arm1_dan_car})" disabled="true" />
+			<input type="number" name='attr_arm1_dañ_car_mod' value="(@{arm1_dañ_car})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
 			<input type="number" name='attr_arm1_dañ_mod' value='0' />
 		</div>
-		<div class="sheet-col-100">
-			<input type="text" name="attr_arm1_dañ_tot" style="width: 120px;" />
+		
+		<div class="sheet-col-50">
+			<label>Base</label>
 		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm1_dañ_dado" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="4" selected>1d4</option>
+				<option type="text" style="width: 35px;" value="6" >1d6</option>
+				<option type="text" style="width: 35px;" value="8" >1d8</option>
+				<option type="text" style="width: 35px;" value="10" >1d10</option>
+				<option type="text" style="width: 35px;" value="12" >1d12</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm1_dañ_sum' value="(@{arm1_dañ_arm} + @{arm1_dañ_car} + @{arm1_dañ_mod})" disabled="true" />
+		</div>
+		
 	</div>
 	
 </div>
@@ -776,7 +790,7 @@
 			<input type="number" name='attr_arm2_dañ_arm' value='0' />
 		</div>
 		<div class="sheet-col-80">
-			<select name="attr_arm2_dan_car" title="hab1_car" style="width: 60px;" >
+			<select name="attr_arm2_dañ_car" title="hab1_car" style="width: 60px;" >
 				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
 				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
 				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
@@ -786,14 +800,28 @@
 			</select>
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm2_dan_car_mod' value="(@{arm2_dan_car})" disabled="true" />
+			<input type="number" name='attr_arm2_dañ_car_mod' value="(@{arm2_dañ_car})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
 			<input type="number" name='attr_arm2_dañ_mod' value='0' />
 		</div>
-		<div class="sheet-col-100">
-			<input type="text" name="attr_arm2_dañ_tot" style="width: 120px;" />
+		
+		<div class="sheet-col-50">
+			<label>Base</label>
 		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm2_dañ_dado" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="4" selected>1d4</option>
+				<option type="text" style="width: 35px;" value="6" >1d6</option>
+				<option type="text" style="width: 35px;" value="8" >1d8</option>
+				<option type="text" style="width: 35px;" value="10" >1d10</option>
+				<option type="text" style="width: 35px;" value="12" >1d12</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm2_dañ_sum' value="(@{arm2_dañ_arm} + @{arm2_dañ_car} + @{arm2_dañ_mod})" disabled="true" />
+		</div>
+		
 	</div>
 	
 </div>
@@ -881,7 +909,7 @@
 			<input type="number" name='attr_arm3_dañ_arm' value='0' />
 		</div>
 		<div class="sheet-col-80">
-			<select name="attr_arm3_dan_car" title="hab1_car" style="width: 60px;" >
+			<select name="attr_arm3_dañ_car" title="hab1_car" style="width: 60px;" >
 				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
 				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
 				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
@@ -891,14 +919,28 @@
 			</select>
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm3_dan_car_mod' value="(@{arm3_dan_car})" disabled="true" />
+			<input type="number" name='attr_arm3_dañ_car_mod' value="(@{arm3_dañ_car})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
 			<input type="number" name='attr_arm3_dañ_mod' value='0' />
 		</div>
-		<div class="sheet-col-100">
-			<input type="text" name="attr_arm3_dañ_tot" style="width: 120px;" />
+		
+		<div class="sheet-col-50">
+			<label>Base</label>
 		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm3_dañ_dado" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="4" selected>1d4</option>
+				<option type="text" style="width: 35px;" value="6" >1d6</option>
+				<option type="text" style="width: 35px;" value="8" >1d8</option>
+				<option type="text" style="width: 35px;" value="10" >1d10</option>
+				<option type="text" style="width: 35px;" value="12" >1d12</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm3_dañ_sum' value="(@{arm3_dañ_arm} + @{arm3_dañ_car} + @{arm3_dañ_mod})" disabled="true" />
+		</div>
+		
 	</div>
 	
 </div>
@@ -986,7 +1028,7 @@
 			<input type="number" name='attr_arm4_dañ_arm' value='0' />
 		</div>
 		<div class="sheet-col-80">
-			<select name="attr_arm4_dan_car" title="hab1_car" style="width: 60px;" >
+			<select name="attr_arm4_dañ_car" title="hab1_car" style="width: 60px;" >
 				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
 				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
 				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
@@ -996,14 +1038,28 @@
 			</select>
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm4_dan_car_mod' value="(@{arm4_dan_car})" disabled="true" />
+			<input type="number" name='attr_arm4_dañ_car_mod' value="(@{arm4_dañ_car})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
 			<input type="number" name='attr_arm4_dañ_mod' value='0' />
 		</div>
-		<div class="sheet-col-100">
-			<input type="text" name="attr_arm4_dañ_tot" style="width: 120px;" />
+		
+		<div class="sheet-col-50">
+			<label>Base</label>
 		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm4_dañ_dado" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="4" selected>1d4</option>
+				<option type="text" style="width: 35px;" value="6" >1d6</option>
+				<option type="text" style="width: 35px;" value="8" >1d8</option>
+				<option type="text" style="width: 35px;" value="10" >1d10</option>
+				<option type="text" style="width: 35px;" value="12" >1d12</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm4_dañ_sum' value="(@{arm4_dañ_arm} + @{arm4_dañ_car} + @{arm4_dañ_mod})" disabled="true" />
+		</div>
+		
 	</div>
 	
 </div>
@@ -1091,7 +1147,7 @@
 			<input type="number" name='attr_arm5_dañ_arm' value='0' />
 		</div>
 		<div class="sheet-col-80">
-			<select name="attr_arm5_dan_car" title="hab1_car" style="width: 60px;" >
+			<select name="attr_arm5_dañ_car" title="hab1_car" style="width: 60px;" >
 				<option type="text" style="width: 35px;" value="@{fue_mod}" selected>Fue</option>
 				<option type="text" style="width: 35px;" value="@{des_mod}" >Des</option>
 				<option type="text" style="width: 35px;" value="@{con_mod}" >Con</option>
@@ -1101,14 +1157,28 @@
 			</select>
 		</div>
 		<div class="sheet-col-50">
-			<input type="number" name='attr_arm5_dan_car_mod' value="(@{arm5_dan_car})" disabled="true" />
+			<input type="number" name='attr_arm5_dañ_car_mod' value="(@{arm5_dañ_car})" disabled="true" />
 		</div>
 		<div class="sheet-col-50">
 			<input type="number" name='attr_arm5_dañ_mod' value='0' />
 		</div>
-		<div class="sheet-col-100">
-			<input type="text" name="attr_arm5_dañ_tot" style="width: 120px;" />
+		
+		<div class="sheet-col-50">
+			<label>Base</label>
 		</div>
+		<div class="sheet-col-80">
+			<select name="attr_arm5_dañ_dado" style="width: 60px;" >
+				<option type="text" style="width: 35px;" value="4" selected>1d4</option>
+				<option type="text" style="width: 35px;" value="6" >1d6</option>
+				<option type="text" style="width: 35px;" value="8" >1d8</option>
+				<option type="text" style="width: 35px;" value="10" >1d10</option>
+				<option type="text" style="width: 35px;" value="12" >1d12</option>
+			</select>
+		</div>
+		<div class="sheet-col-50">
+			<input type="number" name='attr_arm5_dañ_sum' value="(@{arm5_dañ_arm} + @{arm5_dañ_car} + @{arm5_dañ_mod})" disabled="true" />
+		</div>
+		
 	</div>
 	
 </div>
