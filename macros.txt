@@ -1,8 +1,8 @@
 
-Macro Base de Ataque de Arma (ejemplo arma1-1)
+Macro Base de Ataque de Arma (ejemplo arma1-1, doble lanzamiento de CA para ocultar la formula)
 
 **@{selected|nombre}** ataca a **@{target|nombre}** con @{selected|arm1_nom}
-Ataque: [[1d20 + [[@{selected|arm1_ata_tot1}]] ]] vs. CA [[@{target|ca_total}]]
+Ataque: [[1d20 + [[@{selected|arm1_ata_tot1}]] ]] vs. CA [[ [[@{target|ca_total}]] ]]
 Daño: [[@{selected|arm1_dañ_dado} + [[@{selected|arm1_dañ_sum}]] ]]
 
 
