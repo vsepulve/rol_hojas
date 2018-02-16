@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="theos_bian.css">
 </head>
 
-
 <!-- Set up the Tabs -->
 <input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basic Info" checked="checked"/> 
 <span class="sheet-tab sheet-tab1" style='line-height: 20px;'>Informacion Basica</span>
@@ -32,6 +31,9 @@
 <!-- Datos Basicos (2 columnas) -->
 
 <div class="sheet-table">
+	<div class="sheet-row-header">
+		<label>Datos Basicos</label>
+	</div>
 
 	<div class="sheet-col-300">
 		<div class="sheet-row">
@@ -47,7 +49,7 @@
 			<input type="text" name="attr_raza" style="width: 280px;"/>
 		</div>
 		<div class="sheet-row">
-			<label>Categorias y Niveles</label>
+			<label>Clases y Niveles</label>
 		</div>
 		<div class="sheet-row">
 			<input type="text" name="attr_clases" style="width: 280px;"/>
@@ -57,6 +59,12 @@
 		</div>
 		<div class="sheet-row">
 			<input type="text" name="attr_xp" style="width: 280px;"/>
+		</div>
+		<div class="sheet-row">
+			<label>&nbsp;</label>
+		</div>
+		<div class="sheet-row">
+			<label>&nbsp;</label>
 		</div>
 	</div>
 
@@ -94,6 +102,42 @@
 	</div>
 
 </div>
+
+<div class="sheet-table">
+	<div class="sheet-row-header">
+		<label>Niveles por Categoria</label>
+	</div>
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>Nivel de Luchador</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_nivel_luchador' value='0' />
+		</div>
+		<div class="sheet-col-200">
+			<label>Nivel de Bribon</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_nivel_bribon' value='0' />
+		</div>
+	</div>
+	<div class="sheet-row">
+		<div class="sheet-col-200">
+			<label>Nivel de Sacerdote</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_nivel_sacerdote' value='0' />
+		</div>
+		<div class="sheet-col-200">
+			<label>Nivel de Hechicero</label>
+		</div>
+		<div class="sheet-col-100">
+			<input type="number" name='attr_nivel_hechicero' value='0' />
+		</div>
+	</div>
+</div>
+
+<input type="hidden" name='attr_nivel_total' value="(@{nivel_luchador} + @{nivel_bribon} + @{nivel_sacerdote} + @{nivel_hechicero})" />
 
 <hr/>
 
