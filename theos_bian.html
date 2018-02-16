@@ -2341,6 +2341,9 @@
 		<div class="sheet-col-80">
 			<label>Total</label>
 		</div>
+		<div class="sheet-col-80">
+			<label>Tirada</label>
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2367,6 +2370,9 @@
 			<input type="hidden" name='attr_mag_n0_factor' value="(((@{mag_n0_base} + 1) + abs(@{mag_n0_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n0_total' value="((@{mag_n0_total_pre} * @{mag_n0_base}) / @{mag_n0_factor})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 0: [[1d20 + [[@{mag_n0_total}]] ]]" name="roll_conjuro_n0" />
+		</div>
 	</div>
 	
 	<div class="sheet-row-dark">
@@ -2386,12 +2392,15 @@
 			<input type="number" name='attr_mag_n1_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n1_mod' value='0' />
+			<input type="number" name='attr_mag_n1_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n1_total_pre' value="(@{mag_n1_base} + @{mag_car} + @{mag_n1_arm} + @{mag_n1_mod})" />
 			<input type="hidden" name='attr_mag_n1_factor' value="(((@{mag_n1_base} + 1) + abs(@{mag_n1_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n1_total' value="((@{mag_n1_total_pre} * @{mag_n1_base}) / @{mag_n1_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 1: [[1d20 + [[@{mag_n1_total}]] ]]" name="roll_conjuro_n1" />
 		</div>
 	</div>
 	
@@ -2412,12 +2421,15 @@
 			<input type="number" name='attr_mag_n2_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n2_mod' value='0' />
+			<input type="number" name='attr_mag_n2_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n2_total_pre' value="(@{mag_n2_base} + @{mag_car} + @{mag_n2_arm} + @{mag_n2_mod})" />
 			<input type="hidden" name='attr_mag_n2_factor' value="(((@{mag_n2_base} + 1) + abs(@{mag_n2_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n2_total' value="((@{mag_n2_total_pre} * @{mag_n2_base}) / @{mag_n2_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 2: [[1d20 + [[@{mag_n2_total}]] ]]" name="roll_conjuro_n2" />
 		</div>
 	</div>
 	
@@ -2438,12 +2450,15 @@
 			<input type="number" name='attr_mag_n3_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n3_mod' value='0' />
+			<input type="number" name='attr_mag_n3_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n3_total_pre' value="(@{mag_n3_base} + @{mag_car} + @{mag_n3_arm} + @{mag_n3_mod})" />
 			<input type="hidden" name='attr_mag_n3_factor' value="(((@{mag_n3_base} + 1) + abs(@{mag_n3_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n3_total' value="((@{mag_n3_total_pre} * @{mag_n3_base}) / @{mag_n3_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 3: [[1d20 + [[@{mag_n3_total}]] ]]" name="roll_conjuro_n3" />
 		</div>
 	</div>
 	
@@ -2464,12 +2479,15 @@
 			<input type="number" name='attr_mag_n4_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n4_mod' value='0' />
+			<input type="number" name='attr_mag_n4_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n4_total_pre' value="(@{mag_n4_base} + @{mag_car} + @{mag_n4_arm} + @{mag_n4_mod})" />
 			<input type="hidden" name='attr_mag_n4_factor' value="(((@{mag_n4_base} + 1) + abs(@{mag_n4_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n4_total' value="((@{mag_n4_total_pre} * @{mag_n4_base}) / @{mag_n4_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 4: [[1d20 + [[@{mag_n4_total}]] ]]" name="roll_conjuro_n4" />
 		</div>
 	</div>
 	
@@ -2490,12 +2508,15 @@
 			<input type="number" name='attr_mag_n5_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n5_mod' value='0' />
+			<input type="number" name='attr_mag_n5_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n5_total_pre' value="(@{mag_n5_base} + @{mag_car} + @{mag_n5_arm} + @{mag_n5_mod})" />
 			<input type="hidden" name='attr_mag_n5_factor' value="(((@{mag_n5_base} + 1) + abs(@{mag_n5_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n5_total' value="((@{mag_n5_total_pre} * @{mag_n5_base}) / @{mag_n5_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 5: [[1d20 + [[@{mag_n5_total}]] ]]" name="roll_conjuro_n5" />
 		</div>
 	</div>
 	
@@ -2516,12 +2537,15 @@
 			<input type="number" name='attr_mag_n6_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n6_mod' value='0' />
+			<input type="number" name='attr_mag_n6_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n6_total_pre' value="(@{mag_n6_base} + @{mag_car} + @{mag_n6_arm} + @{mag_n6_mod})" />
 			<input type="hidden" name='attr_mag_n6_factor' value="(((@{mag_n6_base} + 1) + abs(@{mag_n6_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n6_total' value="((@{mag_n6_total_pre} * @{mag_n6_base}) / @{mag_n6_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 6: [[1d20 + [[@{mag_n6_total}]] ]]" name="roll_conjuro_n6" />
 		</div>
 	</div>
 	
@@ -2542,12 +2566,15 @@
 			<input type="number" name='attr_mag_n7_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n7_mod' value='0' />
+			<input type="number" name='attr_mag_n7_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n7_total_pre' value="(@{mag_n7_base} + @{mag_car} + @{mag_n7_arm} + @{mag_n7_mod})" />
 			<input type="hidden" name='attr_mag_n7_factor' value="(((@{mag_n7_base} + 1) + abs(@{mag_n7_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n7_total' value="((@{mag_n7_total_pre} * @{mag_n7_base}) / @{mag_n7_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 7: [[1d20 + [[@{mag_n7_total}]] ]]" name="roll_conjuro_n7" />
 		</div>
 	</div>
 	
@@ -2568,12 +2595,15 @@
 			<input type="number" name='attr_mag_n8_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n8_mod' value='0' />
+			<input type="number" name='attr_mag_n8_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n8_total_pre' value="(@{mag_n8_base} + @{mag_car} + @{mag_n8_arm} + @{mag_n8_mod})" />
 			<input type="hidden" name='attr_mag_n8_factor' value="(((@{mag_n8_base} + 1) + abs(@{mag_n8_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n8_total' value="((@{mag_n8_total_pre} * @{mag_n8_base}) / @{mag_n8_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 8: [[1d20 + [[@{mag_n8_total}]] ]]" name="roll_conjuro_n8" />
 		</div>
 	</div>
 	
@@ -2594,12 +2624,15 @@
 			<input type="number" name='attr_mag_n9_arm' value="(@{mag_n0_arm})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
-			<input type="number" name='attr_mag_n9_mod' value='0' />
+			<input type="number" name='attr_mag_n9_mod' value="(@{mag_n0_mod})" disabled="true" />
 		</div>
 		<div class="sheet-col-80">
 			<input type="hidden" name='attr_mag_n9_total_pre' value="(@{mag_n9_base} + @{mag_car} + @{mag_n9_arm} + @{mag_n9_mod})" />
 			<input type="hidden" name='attr_mag_n9_factor' value="(((@{mag_n9_base} + 1) + abs(@{mag_n9_base} - 1)) / 2)" />
 			<input type="number" name='attr_mag_n9_total' value="((@{mag_n9_total_pre} * @{mag_n9_base}) / @{mag_n9_factor})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="**@{nombre}** lanza un conjuro de nivel 9: [[1d20 + [[@{mag_n9_total}]] ]]" name="roll_conjuro_n9" />
 		</div>
 	</div>
 		
@@ -2669,6 +2702,9 @@
 		<div class="sheet-col-400">
 			<label>Informacion</label>
 		</div>
+		<div class="sheet-col-80">
+			<label>Tirada</label>
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2683,6 +2719,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj1_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep1_pm' value="((2*@{conj1_niv} + 1 + abs(2*@{conj1_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep1_base' value="((@{mag_niv} + 2 - 2*@{conj1_niv} + abs(@{mag_niv} + 2 - 2*@{conj1_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep1_total' value="(( (@{mag_prep1_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep1_base}) / (((@{mag_prep1_base} + 1) + abs(@{mag_prep1_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep1_pm}]] ]] PM para lanzar **@{conj1_nom}**: [[1d20 + [[@{mag_prep1_total}]] ]]" name="roll_conjuro_prep1" />
 		</div>
 	</div>
 	
@@ -2699,6 +2741,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj2_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep2_pm' value="((2*@{conj2_niv} + 1 + abs(2*@{conj2_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep2_base' value="((@{mag_niv} + 2 - 2*@{conj2_niv} + abs(@{mag_niv} + 2 - 2*@{conj2_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep2_total' value="(( (@{mag_prep2_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep2_base}) / (((@{mag_prep2_base} + 1) + abs(@{mag_prep2_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep2_pm}]] ]] PM para lanzar **@{conj2_nom}**: [[1d20 + [[@{mag_prep2_total}]] ]]" name="roll_conjuro_prep2" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2713,6 +2761,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj3_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep3_pm' value="((2*@{conj3_niv} + 1 + abs(2*@{conj3_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep3_base' value="((@{mag_niv} + 2 - 2*@{conj3_niv} + abs(@{mag_niv} + 2 - 2*@{conj3_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep3_total' value="(( (@{mag_prep3_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep3_base}) / (((@{mag_prep3_base} + 1) + abs(@{mag_prep3_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep3_pm}]] ]] PM para lanzar **@{conj3_nom}**: [[1d20 + [[@{mag_prep3_total}]] ]]" name="roll_conjuro_prep3" />
 		</div>
 	</div>
 	
@@ -2729,6 +2783,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj4_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep4_pm' value="((2*@{conj4_niv} + 1 + abs(2*@{conj4_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep4_base' value="((@{mag_niv} + 2 - 2*@{conj4_niv} + abs(@{mag_niv} + 2 - 2*@{conj4_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep4_total' value="(( (@{mag_prep4_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep4_base}) / (((@{mag_prep4_base} + 1) + abs(@{mag_prep4_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep4_pm}]] ]] PM para lanzar **@{conj4_nom}**: [[1d20 + [[@{mag_prep4_total}]] ]]" name="roll_conjuro_prep4" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2743,6 +2803,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj5_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep5_pm' value="((2*@{conj5_niv} + 1 + abs(2*@{conj5_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep5_base' value="((@{mag_niv} + 2 - 2*@{conj5_niv} + abs(@{mag_niv} + 2 - 2*@{conj5_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep5_total' value="(( (@{mag_prep5_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep5_base}) / (((@{mag_prep5_base} + 1) + abs(@{mag_prep5_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep5_pm}]] ]] PM para lanzar **@{conj5_nom}**: [[1d20 + [[@{mag_prep5_total}]] ]]" name="roll_conjuro_prep5" />
 		</div>
 	</div>
 	
@@ -2759,6 +2825,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj6_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep6_pm' value="((2*@{conj6_niv} + 1 + abs(2*@{conj6_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep6_base' value="((@{mag_niv} + 2 - 2*@{conj6_niv} + abs(@{mag_niv} + 2 - 2*@{conj6_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep6_total' value="(( (@{mag_prep6_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep6_base}) / (((@{mag_prep6_base} + 1) + abs(@{mag_prep6_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep6_pm}]] ]] PM para lanzar **@{conj6_nom}**: [[1d20 + [[@{mag_prep6_total}]] ]]" name="roll_conjuro_prep6" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2773,6 +2845,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj7_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep7_pm' value="((2*@{conj7_niv} + 1 + abs(2*@{conj7_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep7_base' value="((@{mag_niv} + 2 - 2*@{conj7_niv} + abs(@{mag_niv} + 2 - 2*@{conj7_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep7_total' value="(( (@{mag_prep7_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep7_base}) / (((@{mag_prep7_base} + 1) + abs(@{mag_prep7_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep7_pm}]] ]] PM para lanzar **@{conj7_nom}**: [[1d20 + [[@{mag_prep7_total}]] ]]" name="roll_conjuro_prep7" />
 		</div>
 	</div>
 	
@@ -2789,6 +2867,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj8_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep8_pm' value="((2*@{conj8_niv} + 1 + abs(2*@{conj8_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep8_base' value="((@{mag_niv} + 2 - 2*@{conj8_niv} + abs(@{mag_niv} + 2 - 2*@{conj8_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep8_total' value="(( (@{mag_prep8_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep8_base}) / (((@{mag_prep8_base} + 1) + abs(@{mag_prep8_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep8_pm}]] ]] PM para lanzar **@{conj8_nom}**: [[1d20 + [[@{mag_prep8_total}]] ]]" name="roll_conjuro_prep8" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2803,6 +2887,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj9_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep9_pm' value="((2*@{conj9_niv} + 1 + abs(2*@{conj9_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep9_base' value="((@{mag_niv} + 2 - 2*@{conj9_niv} + abs(@{mag_niv} + 2 - 2*@{conj9_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep9_total' value="(( (@{mag_prep9_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep9_base}) / (((@{mag_prep9_base} + 1) + abs(@{mag_prep9_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep9_pm}]] ]] PM para lanzar **@{conj9_nom}**: [[1d20 + [[@{mag_prep9_total}]] ]]" name="roll_conjuro_prep9" />
 		</div>
 	</div>
 	
@@ -2819,6 +2909,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj10_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep10_pm' value="((2*@{conj10_niv} + 1 + abs(2*@{conj10_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep10_base' value="((@{mag_niv} + 2 - 2*@{conj10_niv} + abs(@{mag_niv} + 2 - 2*@{conj10_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep10_total' value="(( (@{mag_prep10_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep10_base}) / (((@{mag_prep10_base} + 1) + abs(@{mag_prep10_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep10_pm}]] ]] PM para lanzar **@{conj10_nom}**: [[1d20 + [[@{mag_prep10_total}]] ]]" name="roll_conjuro_prep10" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2833,6 +2929,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj11_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep11_pm' value="((2*@{conj11_niv} + 1 + abs(2*@{conj11_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep11_base' value="((@{mag_niv} + 2 - 2*@{conj11_niv} + abs(@{mag_niv} + 2 - 2*@{conj11_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep11_total' value="(( (@{mag_prep11_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep11_base}) / (((@{mag_prep11_base} + 1) + abs(@{mag_prep11_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep11_pm}]] ]] PM para lanzar **@{conj11_nom}**: [[1d20 + [[@{mag_prep11_total}]] ]]" name="roll_conjuro_prep11" />
 		</div>
 	</div>
 	
@@ -2849,6 +2951,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj12_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep12_pm' value="((2*@{conj12_niv} + 1 + abs(2*@{conj12_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep12_base' value="((@{mag_niv} + 2 - 2*@{conj12_niv} + abs(@{mag_niv} + 2 - 2*@{conj12_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep12_total' value="(( (@{mag_prep12_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep12_base}) / (((@{mag_prep12_base} + 1) + abs(@{mag_prep12_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep12_pm}]] ]] PM para lanzar **@{conj12_nom}**: [[1d20 + [[@{mag_prep12_total}]] ]]" name="roll_conjuro_prep12" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2863,6 +2971,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj13_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep13_pm' value="((2*@{conj13_niv} + 1 + abs(2*@{conj13_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep13_base' value="((@{mag_niv} + 2 - 2*@{conj13_niv} + abs(@{mag_niv} + 2 - 2*@{conj13_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep13_total' value="(( (@{mag_prep13_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep13_base}) / (((@{mag_prep13_base} + 1) + abs(@{mag_prep13_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep13_pm}]] ]] PM para lanzar **@{conj13_nom}**: [[1d20 + [[@{mag_prep13_total}]] ]]" name="roll_conjuro_prep13" />
 		</div>
 	</div>
 	
@@ -2879,6 +2993,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj14_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep14_pm' value="((2*@{conj14_niv} + 1 + abs(2*@{conj14_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep14_base' value="((@{mag_niv} + 2 - 2*@{conj14_niv} + abs(@{mag_niv} + 2 - 2*@{conj14_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep14_total' value="(( (@{mag_prep14_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep14_base}) / (((@{mag_prep14_base} + 1) + abs(@{mag_prep14_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep14_pm}]] ]] PM para lanzar **@{conj14_nom}**: [[1d20 + [[@{mag_prep14_total}]] ]]" name="roll_conjuro_prep14" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2893,6 +3013,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj15_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep15_pm' value="((2*@{conj15_niv} + 1 + abs(2*@{conj15_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep15_base' value="((@{mag_niv} + 2 - 2*@{conj15_niv} + abs(@{mag_niv} + 2 - 2*@{conj15_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep15_total' value="(( (@{mag_prep15_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep15_base}) / (((@{mag_prep15_base} + 1) + abs(@{mag_prep15_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep15_pm}]] ]] PM para lanzar **@{conj15_nom}**: [[1d20 + [[@{mag_prep15_total}]] ]]" name="roll_conjuro_prep15" />
 		</div>
 	</div>
 	
@@ -2909,6 +3035,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj16_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep16_pm' value="((2*@{conj16_niv} + 1 + abs(2*@{conj16_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep16_base' value="((@{mag_niv} + 2 - 2*@{conj16_niv} + abs(@{mag_niv} + 2 - 2*@{conj16_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep16_total' value="(( (@{mag_prep16_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep16_base}) / (((@{mag_prep16_base} + 1) + abs(@{mag_prep16_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep16_pm}]] ]] PM para lanzar **@{conj16_nom}**: [[1d20 + [[@{mag_prep16_total}]] ]]" name="roll_conjuro_prep16" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2923,6 +3055,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj17_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep17_pm' value="((2*@{conj17_niv} + 1 + abs(2*@{conj17_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep17_base' value="((@{mag_niv} + 2 - 2*@{conj17_niv} + abs(@{mag_niv} + 2 - 2*@{conj17_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep17_total' value="(( (@{mag_prep17_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep17_base}) / (((@{mag_prep17_base} + 1) + abs(@{mag_prep17_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep17_pm}]] ]] PM para lanzar **@{conj17_nom}**: [[1d20 + [[@{mag_prep17_total}]] ]]" name="roll_conjuro_prep17" />
 		</div>
 	</div>
 	
@@ -2939,6 +3077,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj18_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep18_pm' value="((2*@{conj18_niv} + 1 + abs(2*@{conj18_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep18_base' value="((@{mag_niv} + 2 - 2*@{conj18_niv} + abs(@{mag_niv} + 2 - 2*@{conj18_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep18_total' value="(( (@{mag_prep18_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep18_base}) / (((@{mag_prep18_base} + 1) + abs(@{mag_prep18_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep18_pm}]] ]] PM para lanzar **@{conj18_nom}**: [[1d20 + [[@{mag_prep18_total}]] ]]" name="roll_conjuro_prep18" />
+		</div>
 	</div>
 	
 	<div class="sheet-row">
@@ -2954,6 +3098,12 @@
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj19_info" style="width: 380px;" />
 		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep19_pm' value="((2*@{conj19_niv} + 1 + abs(2*@{conj19_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep19_base' value="((@{mag_niv} + 2 - 2*@{conj19_niv} + abs(@{mag_niv} + 2 - 2*@{conj19_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep19_total' value="(( (@{mag_prep19_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep19_base}) / (((@{mag_prep19_base} + 1) + abs(@{mag_prep19_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep19_pm}]] ]] PM para lanzar **@{conj19_nom}**: [[1d20 + [[@{mag_prep19_total}]] ]]" name="roll_conjuro_prep19" />
+		</div>
 	</div>
 	
 	<div class="sheet-row-dark">
@@ -2968,6 +3118,12 @@
 		</div>
 		<div class="sheet-col-400">
 			<input type="text" name="attr_conj20_info" style="width: 380px;" />
+		</div>
+		<div class="sheet-col-80">
+			<input type="hidden" name='attr_mag_prep20_pm' value="((2*@{conj20_niv} + 1 + abs(2*@{conj20_niv} - 1) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep20_base' value="((@{mag_niv} + 2 - 2*@{conj20_niv} + abs(@{mag_niv} + 2 - 2*@{conj20_niv}) ) / 2)" />
+			<input type="hidden" name='attr_mag_prep20_total' value="(( (@{mag_prep20_base} + @{mag_car} + @{mag_n0_arm} + @{mag_n0_mod}) * @{mag_prep20_base}) / (((@{mag_prep20_base} + 1) + abs(@{mag_prep20_base} - 1)) / 2) )" />
+			<button type='roll' value="**@{nombre}** gasta [[ [[@{mag_prep20_pm}]] ]] PM para lanzar **@{conj20_nom}**: [[1d20 + [[@{mag_prep20_total}]] ]]" name="roll_conjuro_prep20" />
 		</div>
 	</div>
 	
