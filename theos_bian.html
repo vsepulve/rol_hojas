@@ -93,81 +93,6 @@
 		</div>
 	</div>
 
-<!--	<div class="sheet-row">-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Nombre</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_nombre" />-->
-<!--		</div>-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Estatura</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_estatura" />-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	-->
-<!--	<div class="sheet-row">-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Raza</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_raza" />-->
-<!--		</div>-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Peso</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_peso" />-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	-->
-<!--	<div class="sheet-row">-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Niveles</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_clases" />-->
-<!--		</div>-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Ojos</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_ojos" />-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	-->
-<!--	<div class="sheet-row">-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Experiencia</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_xp" />-->
-<!--		</div>-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Cabello</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_cabello" />-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	-->
-<!--	<div class="sheet-row">-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>&nbsp;</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<label>&nbsp;</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-100">-->
-<!--			<label>Piel</label>-->
-<!--		</div>-->
-<!--		<div class="sheet-col-300">-->
-<!--			<input type="text" name="attr_piel" />-->
-<!--		</div>-->
-<!--	</div>-->
-	
 </div>
 
 <hr/>
@@ -183,20 +108,23 @@
 		<div class="sheet-col-100">
 			<label>Nombre</label>
 		</div>
-		<div  class="sheet-col-100">
+		<div  class="sheet-col-80">
 			<label>Base</label>
 		</div>
-		<div  class="sheet-col-100">
+		<div  class="sheet-col-80">
 			<label>Equipo</label>
 		</div>
-		<div  class="sheet-col-100">
+		<div  class="sheet-col-80">
 			<label>Temp</label>
 		</div>
-		<div  class="sheet-col-100">
+		<div  class="sheet-col-80">
 			<label>Total</label>
 		</div>
-		<div  class="sheet-col-100">
+		<div  class="sheet-col-80">
 			<label>Mod</label>
+		</div>
+		<div  class="sheet-col-80">
+			<label>Tirada</label>
 		</div>
 	</div>
 
@@ -205,20 +133,23 @@
 		<div class="sheet-col-100">
 			<label>Fuerza</label>
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_fue' value='10' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_fue_eq' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_fue_temp' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_fue_total' value="(@{fue} + @{fue_eq} + @{fue_temp})" disabled="true" />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_fue_mod' value="(floor((@{fue_total}) / 2) - 5)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de Fuerza de **@{nombre}**: [[1d20 + [[@{fue_mod}]] ]]" name="roll_control_fuerza" />
 		</div>
 	</div>
 
@@ -227,20 +158,23 @@
 		<div class="sheet-col-100">
 			<label>Destreza</label>
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_des' value='10' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_des_eq' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_des_temp' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_des_total' value="(@{des} + @{des_eq} + @{des_temp})" disabled="true" />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_des_mod' value="(floor((@{des_total}) / 2) - 5)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de Destreza de **@{nombre}**: [[1d20 + [[@{des_mod}]] ]]" name="roll_control_destreza" />
 		</div>
 	</div>
 
@@ -249,20 +183,23 @@
 		<div class="sheet-col-100">
 			<label>Constitucion</label>
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_con' value='10' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_con_eq' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_con_temp' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_con_total' value="(@{con} + @{con_eq} + @{con_temp})" disabled="true" />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_con_mod' value="(floor((@{con_total}) / 2) - 5)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de Constitucion de **@{nombre}**: [[1d20 + [[@{con_mod}]] ]]" name="roll_control_constitucion" />
 		</div>
 	</div>
 
@@ -271,20 +208,23 @@
 		<div class="sheet-col-100">
 			<label>Inteligencia</label>
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_int' value='10' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_int_eq' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_int_temp' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_int_total' value="(@{int} + @{int_eq} + @{int_temp})" disabled="true" />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_int_mod' value="(floor((@{int_total}) / 2) - 5)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de Inteligencia de **@{nombre}**: [[1d20 + [[@{int_mod}]] ]]" name="roll_control_inteligencia" />
 		</div>
 	</div>
 
@@ -293,20 +233,23 @@
 		<div class="sheet-col-100">
 			<label>Sabiduria</label>
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_sab' value='10' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_sab_eq' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_sab_temp' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_sab_total' value="(@{sab} + @{sab_eq} + @{sab_temp})" disabled="true" />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_sab_mod' value="(floor((@{sab_total}) / 2) - 5)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de Sabiduria de **@{nombre}**: [[1d20 + [[@{sab_mod}]] ]]" name="roll_control_sabiduria" />
 		</div>
 	</div>
 
@@ -315,20 +258,23 @@
 		<div class="sheet-col-100">
 			<label>Carisma</label>
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_car' value='10' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_car_eq' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_car_temp' value='0' />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_car_total' value="(@{car} + @{car_eq} + @{car_temp})" disabled="true" />
 		</div>
-		<div class="sheet-col-100">
+		<div class="sheet-col-80">
 			<input type="number" name='attr_car_mod' value="(floor((@{car_total}) / 2) - 5)" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de Carisma de **@{nombre}**: [[1d20 + [[@{car_mod}]] ]]" name="roll_control_carisma" />
 		</div>
 	</div>
 
@@ -377,6 +323,9 @@
 		<div  class="sheet-col-100">
 			<label>Total</label>
 		</div>
+		<div  class="sheet-col-100">
+			<label>Tirada</label>
+		</div>
 	</div>
 
 	<!-- Dureza -->
@@ -398,6 +347,9 @@
 		</div>
 		<div class="sheet-col-100">
 			<input type="number" name='attr_ts_dur_total' value="(@{ts_dur} + @{ts_dur_mod} + @{ts_dur_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="TS de Dureza de **@{nombre}**: [[1d20 + [[@{ts_dur_total}]] ]]" name="roll_control_dureza" />
 		</div>
 	</div>
 
@@ -421,6 +373,9 @@
 		<div class="sheet-col-100">
 			<input type="number" name='attr_ts_ref_total' value="(@{ts_ref} + @{ts_ref_mod} + @{ts_ref_temp})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="TS de Reflejos de **@{nombre}**: [[1d20 + [[@{ts_ref_total}]] ]]" name="roll_control_reflejos" />
+		</div>
 	</div>
 
 	<!-- Mente -->
@@ -443,6 +398,9 @@
 		<div class="sheet-col-100">
 			<input type="number" name='attr_ts_men_total' value="(@{ts_men} + @{ts_men_mod} + @{ts_men_temp})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="TS de Mente de **@{nombre}**: [[1d20 + [[@{ts_men_total}]] ]]" name="roll_control_mente" />
+		</div>
 	</div>
 
 	<!-- Espiritu -->
@@ -464,6 +422,9 @@
 		</div>
 		<div class="sheet-col-100">
 			<input type="number" name='attr_ts_esp_total' value="(@{ts_esp} + @{ts_esp_mod} + @{ts_esp_temp})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="TS de Espiritu de **@{nombre}**: [[1d20 + [[@{ts_esp_total}]] ]]" name="roll_control_espiritu" />
 		</div>
 	</div>
 	
@@ -1271,6 +1232,9 @@
 		<div class="sheet-col-80">
 			<label>Total</label>
 		</div>
+		<div class="sheet-col-80">
+			<label>Tirada</label>
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1301,6 +1265,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab1_total' value="(@{hab1_base} + @{hab1_car} + @{hab1_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab1_nom} de **@{nombre}**: [[1d20 + [[@{hab1_total}]] ]]" name="roll_control_hab1" />
 		</div>
 	</div>
 
@@ -1333,6 +1300,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab2_total' value="(@{hab2_base} + @{hab2_car} + @{hab2_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab2_nom} de **@{nombre}**: [[1d20 + [[@{hab2_total}]] ]]" name="roll_control_hab2" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1363,6 +1333,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab3_total' value="(@{hab3_base} + @{hab3_car} + @{hab3_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab3_nom} de **@{nombre}**: [[1d20 + [[@{hab3_total}]] ]]" name="roll_control_hab3" />
 		</div>
 	</div>
 
@@ -1395,6 +1368,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab4_total' value="(@{hab4_base} + @{hab4_car} + @{hab4_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab4_nom} de **@{nombre}**: [[1d20 + [[@{hab4_total}]] ]]" name="roll_control_hab4" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1425,6 +1401,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab5_total' value="(@{hab5_base} + @{hab5_car} + @{hab5_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab5_nom} de **@{nombre}**: [[1d20 + [[@{hab5_total}]] ]]" name="roll_control_hab5" />
 		</div>
 	</div>
 
@@ -1457,6 +1436,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab6_total' value="(@{hab6_base} + @{hab6_car} + @{hab6_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab6_nom} de **@{nombre}**: [[1d20 + [[@{hab6_total}]] ]]" name="roll_control_hab6" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1487,6 +1469,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab7_total' value="(@{hab7_base} + @{hab7_car} + @{hab7_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab7_nom} de **@{nombre}**: [[1d20 + [[@{hab7_total}]] ]]" name="roll_control_hab7" />
 		</div>
 	</div>
 
@@ -1519,6 +1504,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab8_total' value="(@{hab8_base} + @{hab8_car} + @{hab8_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab8_nom} de **@{nombre}**: [[1d20 + [[@{hab8_total}]] ]]" name="roll_control_hab8" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1549,6 +1537,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab9_total' value="(@{hab9_base} + @{hab9_car} + @{hab9_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab9_nom} de **@{nombre}**: [[1d20 + [[@{hab9_total}]] ]]" name="roll_control_hab9" />
 		</div>
 	</div>
 
@@ -1581,6 +1572,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab10_total' value="(@{hab10_base} + @{hab10_car} + @{hab10_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab10_nom} de **@{nombre}**: [[1d20 + [[@{hab10_total}]] ]]" name="roll_control_hab10" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1611,6 +1605,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab11_total' value="(@{hab11_base} + @{hab11_car} + @{hab11_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab11_nom} de **@{nombre}**: [[1d20 + [[@{hab11_total}]] ]]" name="roll_control_hab11" />
 		</div>
 	</div>
 
@@ -1643,6 +1640,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab12_total' value="(@{hab12_base} + @{hab12_car} + @{hab12_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab12_nom} de **@{nombre}**: [[1d20 + [[@{hab12_total}]] ]]" name="roll_control_hab12" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1673,6 +1673,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab13_total' value="(@{hab13_base} + @{hab13_car} + @{hab13_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab13_nom} de **@{nombre}**: [[1d20 + [[@{hab13_total}]] ]]" name="roll_control_hab13" />
 		</div>
 	</div>
 
@@ -1705,6 +1708,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab14_total' value="(@{hab14_base} + @{hab14_car} + @{hab14_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab14_nom} de **@{nombre}**: [[1d20 + [[@{hab14_total}]] ]]" name="roll_control_hab14" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1735,6 +1741,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab15_total' value="(@{hab15_base} + @{hab15_car} + @{hab15_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab15_nom} de **@{nombre}**: [[1d20 + [[@{hab15_total}]] ]]" name="roll_control_hab15" />
 		</div>
 	</div>
 
@@ -1767,6 +1776,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab16_total' value="(@{hab16_base} + @{hab16_car} + @{hab16_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab16_nom} de **@{nombre}**: [[1d20 + [[@{hab16_total}]] ]]" name="roll_control_hab16" />
+		</div>
 	</div>
 
 	<div class="sheet-row">
@@ -1798,6 +1810,9 @@
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab17_total' value="(@{hab17_base} + @{hab17_car} + @{hab17_mod})" disabled="true" />
 		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab17_nom} de **@{nombre}**: [[1d20 + [[@{hab17_total}]] ]]" name="roll_control_hab17" />
+		</div>
 	</div>
 
 	<div class="sheet-row-dark">
@@ -1828,6 +1843,9 @@
 		</div>
 		<div class="sheet-col-80">
 			<input type="number" name='attr_hab18_total' value="(@{hab18_base} + @{hab18_car} + @{hab18_mod})" disabled="true" />
+		</div>
+		<div class="sheet-col-80">
+			<button type='roll' value="Tirada de @{hab18_nom} de **@{nombre}**: [[1d20 + [[@{hab18_total}]] ]]" name="roll_control_hab18" />
 		</div>
 	</div>
 
