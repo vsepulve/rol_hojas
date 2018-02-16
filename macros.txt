@@ -1,8 +1,11 @@
 
 Macro Base de Ataque de Arma (ejemplo arma1-1)
 
-** @{selected|nombre} ataca a @{target|nombre} con @{selected|arm1_nom} **
+**@{selected|nombre}** ataca a **@{target|nombre}** con @{selected|arm1_nom}
 Ataque: [[1d20 + [[@{selected|arm1_ata_tot1}]] ]] vs. CA [[@{target|ca_total}]]
 Daño: [[@{selected|arm1_dañ_dado} + [[@{selected|arm1_dañ_sum}]] ]]
 
 
+Macro de Tirada de Iniciativa ("&{tracker}" agrega la tirada directamente al tracker de turnos)
+
+Iniciativa de **@{selected|nombre}**: [[1d20 + [[@{selected|nivel_total}]] + [[@{selected|des_mod}]] &{tracker} ]]
