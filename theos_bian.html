@@ -572,7 +572,7 @@
 		<label style="font-weight:bold">Ataques Base</label>
 	</div>
 	<div class="sheet-col-100">
-		<input type="number" name='attr_ata_base' value='1' />
+		<input type="number" name='attr_ata_base' value="(@{nivel_luchador} + floor(@{nivel_sacerdote}*3/4) + floor(@{nivel_bribon}*3/4) + floor(@{nivel_hechicero}/2))" disabled="true" />
 	</div>
 	<div class="sheet-col-200">
 		<label style="font-weight:bold">Numero de Ataques</label>
@@ -2258,7 +2258,10 @@
 		<label style="font-weight:bold">Nivel de Conjurador</label>
 	</div>
 	<div class="sheet-col-80">
-		<input type="number" name='attr_mag_niv' value='0' />
+		<input type="hidden" name='attr_mag_niv_sag' value="( ( @{nivel_sacerdote} + (@{nivel_luchador} - 2) + abs(@{nivel_sacerdote} - (@{nivel_luchador} - 2)) ) / 2 )" />
+		<input type="hidden" name='attr_mag_niv_arc' value="( ( @{nivel_hechicero} + (@{nivel_bribon} - 2) + abs(@{nivel_hechicero} - (@{nivel_bribon} - 2)) ) / 2 )" />
+		<input type="hidden" name='attr_mag_niv_calc' value="( ( @{mag_niv_sag} + @{mag_niv_arc} + abs(@{mag_niv_sag} - @{mag_niv_arc}) ) / 2 )" />
+		<input type="number" name='attr_mag_niv' value="(@{mag_niv_calc})" disabled="true" />
 	</div>
 	<div class="sheet-col-80">
 		<select name="attr_mag_car" style="width: 60px;" >
