@@ -2351,8 +2351,8 @@
 		<label style="font-weight:bold">Nivel de Conjurador</label>
 	</div>
 	<div class="sheet-col-80">
-		<input type="hidden" name='attr_mag_niv_sag' value="( ( @{nivel_sacerdote} + (@{nivel_luchador} - 2) + abs(@{nivel_sacerdote} - (@{nivel_luchador} - 2)) ) / 2 )" />
-		<input type="hidden" name='attr_mag_niv_arc' value="( ( @{nivel_hechicero} + (@{nivel_bribon} - 2) + abs(@{nivel_hechicero} - (@{nivel_bribon} - 2)) ) / 2 )" />
+		<input type="hidden" name='attr_mag_niv_sag' value="( ( @{nivel_sacerdote} + floor(@{nivel_luchador}*2/3) + abs(@{nivel_sacerdote} - floor(@{nivel_luchador}*2/3)) ) / 2 )" />
+		<input type="hidden" name='attr_mag_niv_arc' value="( ( @{nivel_hechicero} + floor(@{nivel_bribon}*2/3) + abs(@{nivel_hechicero} - floor(@{nivel_bribon}*2/3)) ) / 2 )" />
 		<input type="hidden" name='attr_mag_niv_calc' value="( ( @{mag_niv_sag} + @{mag_niv_arc} + abs(@{mag_niv_sag} - @{mag_niv_arc}) ) / 2 )" />
 		<input type="number" name='attr_mag_niv' value="(@{mag_niv_calc})" disabled="true" />
 	</div>
