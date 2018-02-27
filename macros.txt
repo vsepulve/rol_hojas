@@ -1,11 +1,14 @@
 
 Macro Base de Ataque de Arma (ejemplo arma1-1, doble lanzamiento de CA para ocultar la formula)
+Ajustes para golpe critico: cs agregado para el ataque, mult crit agregado como linea adicional de texto, cs y cf eliminados del daño (con 100 y 0)
 
 **@{selected|nombre}** ataca a **@{target|nombre}** con @{selected|arm1_nom}
-Ataque: [[1d20 + [[@{selected|arm1_ata_tot1}]] ]] vs. CA [[ [[@{target|ca_total}]] ]]
-Daño: [[@{selected|arm1_dañ_dado} + [[@{selected|arm1_dañ_sum}]] ]]
-
+Ataque: [[1d20cs>@{selected|arm1_prob_crit} + [[@{selected|arm1_ata_tot1}]] ]] vs. CA [[ [[@{target|ca_total}]] ]]
+Daño: [[@{selected|arm1_dañ_dado}cs>100cf<0 + [[@{selected|arm1_dañ_sum}]] ]]
+*Mult Critico: **x@{selected|arm1_mult_crit}** *
 
 Macro de Tirada de Iniciativa ("&{tracker}" agrega la tirada directamente al tracker de turnos)
 
 Iniciativa de **@{selected|nombre}**: [[1d20 + [[@{selected|nivel_total}]] + [[@{selected|des_mod}]] &{tracker} ]]
+
+
